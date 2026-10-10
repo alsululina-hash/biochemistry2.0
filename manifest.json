@@ -1,0 +1,11 @@
+{
+  "name": "Биохимия · интерактивный курс",
+  "short_name": "Биохимия",
+  "start_url": "index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f6f8fc",
+  "theme_color": "#0f1b2d",
+  "lang": "ru",
+  "description": "Интерактивный курс биохимии: теория, схемы, задачи, карточки с интервальным повторением"
+}

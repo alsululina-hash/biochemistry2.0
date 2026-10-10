@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f1b2d">
+<title>Глава 5. Обмен белков · Биохимия</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="topbar">
+  <button class="burger" id="burger">☰ Разделы</button>
+  <div class="tb-title" id="tbTitle">Глава 5</div>
+  <div class="settings-host" id="settingsHostTop"><button class="icon-btn" data-settings title="Настройки">⚙</button></div>
+</div>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px">
+      <a href="index.html" style="color:#7aa5ff;text-decoration:none;font-size:13px;font-weight:600">← Все главы</a>
+      <div class="settings-host" id="settingsHost"><button class="icon-btn" data-settings title="Настройки">⚙</button></div>
+    </div>
+    <div class="brand">Глава 5<br><em>Обмен белков</em></div>
+    <div class="brand-sub">Азотистый баланс, переваривание, превращения аминокислот, обезвреживание аммиака</div>
+    <div class="search"><input id="q" type="search" placeholder="Поиск по разделам…" aria-label="Поиск по разделам"></div>
+    <div id="nav"></div>
+    <div class="rail-progress">
+      <div>Пройдено разделов</div>
+      <div class="bar"><i id="pbar"></i></div>
+      <div id="ptext"></div>
+    </div>
+    <div class="rail-src">Прогресс и расписание повторений сохраняются в этом браузере.</div>
+  </aside>
+  <main class="main" id="main"></main>
+</div>
+<script src="data-ch5.js"></script>
+<script src="app.js"></script>
+<script>
+  BIOCHAPTER(window.CHAPTERS_DATA[5]);
+  var _h = document.getElementById('settingsHostTop');
+  if(_h) _h.querySelector('[data-settings]').addEventListener('click', function(e){ e.stopPropagation(); BIOSETTINGS(_h, function(){ location.reload(); }); });
+  if('serviceWorker' in navigator && location.protocol.indexOf('http')===0) navigator.serviceWorker.register('sw.js').catch(function(){});
+</script>
+</body>
+</html>
